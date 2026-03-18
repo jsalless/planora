@@ -1,0 +1,454 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  background: #e7e2d3;
+}
+
+.videoSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.videoCard {
+  width: min(100%, 26rem);
+  height: 35rem;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  box-shadow: none;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.formSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  width: min(100%, 52rem);
+  height: 35rem;
+  position: relative;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 40px -12px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  background: #ffffff;
+}
+
+.cardTopTitle {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #004643;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.card > div {
+  position: absolute;
+  width: 50%;
+  min-width: 18.75rem;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  padding: 1.8rem 2.2rem;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.content h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #19191a;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-bottom: 0.8rem;
+}
+
+.iconButton {
+  width: 2.05rem;
+  height: 2.05rem;
+  border-radius: 999px;
+  border: 1px solid #d9dde3;
+  background: #ffffff;
+  color: #606a78;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 120ms ease-in, border-color 120ms ease-in;
+}
+
+.iconButton:hover {
+  color: #004643;
+  border-color: #95b4b3;
+}
+
+.loginWith {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.loginWith::before,
+.loginWith::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  height: 1px;
+  background: #d2d7dd;
+  vertical-align: middle;
+}
+
+.loginWith::before {
+  margin-right: 0.6rem;
+}
+
+.loginWith::after {
+  margin-left: 0.6rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  border: none;
+  padding: 0.8rem 0.9rem;
+  width: 100%;
+  font-size: 0.95rem;
+  background: #eef1f4;
+  color: #1b2028;
+  border-radius: 0.45rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.rememberLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.83rem;
+  color: #4d5662;
+}
+
+.rememberLabel input {
+  accent-color: #004643;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #004643;
+  font-size: 0.83rem;
+  cursor: pointer;
+}
+
+.primaryButton,
+.ghostButton {
+  margin-top: 0.8rem;
+  border-radius: 2rem;
+  border: 1px solid #004643;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 120ms ease-in;
+  cursor: pointer;
+}
+
+.primaryButton {
+  width: 100%;
+  background: #004643;
+}
+
+.ghostButton {
+  background: transparent;
+  border-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.primaryButton:active,
+.ghostButton:active {
+  transform: scale(0.96);
+}
+
+.loginPanel {
+  left: 0;
+  background: #fafafa;
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+
+.registerPanel {
+  right: 0;
+  z-index: 1;
+  border-radius: 0 1.25rem 1.25rem 0;
+  background: #fafafa;
+}
+
+.flipPage {
+  right: 0;
+  color: #fff;
+  border-radius: 0 1.25rem 1.25rem 0;
+  transform-origin: left center;
+  transition: animation 1s linear;
+}
+
+.flipPage p {
+  margin: 1rem auto 0;
+  font-size: 0.94rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.flipIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+}
+
+.front {
+  background: linear-gradient(-45deg, #004643 0%, #2c6e69 100%) no-repeat 0 0 / 200%;
+  z-index: 3;
+}
+
+.back {
+  background: linear-gradient(135deg, #2c6e69 0%, #004643 100%) no-repeat 0 0 / 200%;
+  z-index: 2;
+}
+
+.back .content {
+  transform: rotateY(180deg);
+}
+
+.active .front {
+  animation: rot-front 0.6s ease-in-out normal forwards;
+}
+
+.active .back {
+  animation: rot-back 0.6s ease-in-out normal forwards;
+}
+
+.close .front {
+  animation: close-rot-front 0.6s ease-in-out normal forwards;
+}
+
+.close .back {
+  animation: close-rot-back 0.6s ease-in-out normal forwards;
+}
+
+.active .registerPanel .content {
+  animation: show 0.7s ease-in-out normal forwards;
+}
+
+.close .registerPanel .content {
+  animation: hide 0.7s ease-in-out normal forwards;
+}
+
+.active .loginPanel .content {
+  animation: hide 0.7s ease-in-out normal forwards;
+}
+
+.close .loginPanel .content {
+  animation: show 0.7s ease-in-out normal forwards;
+}
+
+@keyframes rot-front {
+  from {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+
+  to {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+}
+
+@keyframes close-rot-front {
+  from {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+
+  to {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+}
+
+@keyframes rot-back {
+  from {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+
+  to {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+}
+
+@keyframes close-rot-back {
+  from {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+
+  to {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 1100px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .videoSide {
+    min-height: 32vh;
+    padding-bottom: 0.5rem;
+  }
+
+  .videoCard {
+    width: min(100%, 20rem);
+    height: 26rem;
+  }
+
+  .formSide {
+    padding-block: 2rem 2.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .formSide {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 44rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .card > div {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    border-radius: 0;
+    height: auto;
+  }
+
+  .loginPanel,
+  .registerPanel,
+  .flipPage {
+    left: 0;
+    right: 0;
+  }
+
+  .flipPage {
+    transform-origin: center;
+    min-height: 12.5rem;
+  }
+
+  .back .content {
+    transform: none;
+  }
+
+  .active .front,
+  .active .back,
+  .close .front,
+  .close .back {
+    animation: none;
+  }
+
+  .active .loginPanel .content,
+  .close .registerPanel .content {
+    display: none;
+    animation: none;
+  }
+
+  .active .registerPanel .content,
+  .close .loginPanel .content {
+    display: block;
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
