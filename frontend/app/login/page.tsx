@@ -7,7 +7,7 @@ import {
 	FiLogIn,
 	FiUserPlus,
 } from "react-icons/fi";
-import { FaFacebookF, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaGoogle, FaGithub } from "react-icons/fa6";
 import styles from "./page.module.css";
 
 export default function LoginPage() {
@@ -41,16 +41,10 @@ export default function LoginPage() {
 							<h3>Login</h3>
 							<div className={styles.socialIcons} aria-hidden="true">
 								<button type="button" className={styles.iconButton}>
-									<FaFacebookF />
-								</button>
-								<button type="button" className={styles.iconButton}>
-									<FaXTwitter />
+									<FaGoogle />
 								</button>
 								<button type="button" className={styles.iconButton}>
 									<FaGithub />
-								</button>
-								<button type="button" className={styles.iconButton}>
-									<FaLinkedinIn />
 								</button>
 							</div>
 							<span className={styles.loginWith}>ou entre com seu e-mail</span>
@@ -82,16 +76,10 @@ export default function LoginPage() {
 							<h3>Cadastro</h3>
 							<div className={styles.socialIcons} aria-hidden="true">
 								<button type="button" className={styles.iconButton}>
-									<FaFacebookF />
-								</button>
-								<button type="button" className={styles.iconButton}>
-									<FaXTwitter />
+									<FaGoogle />
 								</button>
 								<button type="button" className={styles.iconButton}>
 									<FaGithub />
-								</button>
-								<button type="button" className={styles.iconButton}>
-									<FaLinkedinIn />
 								</button>
 							</div>
 							<span className={styles.loginWith}>ou use seu e-mail para cadastro</span>
@@ -103,10 +91,6 @@ export default function LoginPage() {
 									placeholder="Senha"
 									autoComplete="new-password"
 								/>
-								<label className={styles.rememberLabel}>
-									<input type="checkbox" />
-									Aceito os termos
-								</label>
 								<button type="submit" className={styles.primaryButton}>
 									Cadastrar
 								</button>
