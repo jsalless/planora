@@ -3,6 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
 import { UserService } from 'src/user/user.service';
 import * as bcrypt from 'bcrypt';
+import { LoginDto } from './dto/login.dto';
 
 @Injectable()
 export class AuthService {
@@ -17,8 +18,8 @@ export class AuthService {
         return { user, token };
     }
 
-    async login(email: string, password: string) {
-        const user = await this.userService.findByEmail(email);
+    async login(looginDto: LoginDto) {
+        const user = await this.userService.findByEmail(LoginDto.email);
 
         if (!user) {
             throw new UnauthorizedException('Credenciais inválidas')
